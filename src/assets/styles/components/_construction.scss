@@ -1,0 +1,91 @@
+// Container and Alignment
+.construction-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: $secondary-color; // Warm white background
+    padding: $container-padding;
+  
+    .content {
+      text-align: center;
+      max-width: 600px;
+      padding: 40px;
+      background-color: $soft-grey; // Subtle grey background
+      border-radius: 20px;
+      box-shadow: 0px 4px 15px $box-shadow-color;
+    }
+  
+    // Headline Styling
+    .headline {
+      font-size: 2.5rem;
+      color: $primary-color;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+  
+    .subheadline {
+      font-size: 1.25rem;
+      color: $text-primary;
+      margin-bottom: 1.5rem;
+    }
+  
+    // Animation Box Styling
+    .animation-box {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 2rem;
+  
+      .tool-icon {
+        width: 50px;
+        height: 50px;
+        background-color: $accent-color; // Accent for icons
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: bounce 1.5s infinite ease-in-out;
+        
+        &.hammer::before { content: "🔨"; font-size: 1.5rem; }
+        &.wrench::before { content: "🔧"; font-size: 1.5rem; }
+        &.bolt::before { content: "⚡"; font-size: 1.5rem; }
+  
+        &:nth-child(1) { animation-delay: 0.1s; }
+        &:nth-child(2) { animation-delay: 0.3s; }
+        &:nth-child(3) { animation-delay: 0.5s; }
+      }
+    }
+  
+    // Button Styling
+    .notify-btn {
+      background-color: $btn-color;
+      color: $white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  
+      &:hover {
+        background-color: $hover-color;
+      }
+  
+      &:active {
+        background-color: $active-color;
+      }
+    }
+  }
+  
+  // Bounce Animation
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  

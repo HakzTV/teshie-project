@@ -1,0 +1,127 @@
+.prime-container{
+    border-radius: 50px 50px 0 0;
+    padding: 20px;
+    position: relative;
+    top: -30px;
+    background-color: $white;
+    .prime-header{
+        text-align: center;
+        h2 {
+            margin-top: 0;
+            margin-bottom: 0;
+            font-family: Garnett, sans-serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            line-height: 1.3;
+        }   
+    }
+}
+.categories{
+    display: flex;
+    flex-direction: column;
+                    font-family: 'Garnett', sans-serif;
+
+    margin: 20px 0;
+    gap: 15px;
+}
+.browse-cat-header{
+                    font-family: 'Garnett', sans-serif;
+
+    margin-bottom: 20px;
+}
+.category-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.cat-small{
+    width: 284.5px;
+
+     @include respond-to(sm) {
+        width: 100%;
+    }
+}
+.cat-big{
+    width: 700px;
+}
+.category{
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+
+
+    &:hover{
+
+        .cat-overlay {
+           opacity: 1;
+         }
+       .cat-title {
+           display: none;
+         }
+         .vehicle-image{
+            height: 120%;
+            transition: all 0.2s;
+         }
+    }
+     @include respond-to(sm) {
+        height: 160px;
+    }
+}
+
+.cat-overlay {
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:#1e1e1e75;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s;
+
+  
+  }
+  
+  .cat-title{
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    color: white;
+    font-family: 'Garnett', sans-serif;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+.vehicle-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+// Discount
+.discount{
+    background-color: #E33F3F;
+    color: #fff;
+    padding: 10px 15px;
+    position: absolute;
+    top: 30px;
+    right: 8%;
+}
+
+.disc-img{
+    width: 60%;
+    margin-bottom:30px ;
+
+    @media (max-width:450px) {
+        width: 100%;
+    }
+}
+.season-disc{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5rem !important;
+}

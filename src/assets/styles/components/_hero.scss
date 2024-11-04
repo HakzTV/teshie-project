@@ -1,0 +1,84 @@
+.text-animation {
+    font-size: 6vw; /* Adjust font size as needed */
+    position: relative; /* Position relative for cursor positioning 
+    */
+    color: $soft-violet;
+    font-weight: 400;
+
+    @include respond-to(sm){
+        font-size: 1.9rem;
+    }
+  }
+  
+  .cursor {
+    display: inline-block; /* Make the cursor an inline-block for proper spacing */
+    width: 7px; /* Width of the cursor rectangle */
+    height: 1em; /* Height of the cursor to match the text */
+    background-color: black; /* Cursor color */
+    margin-left: 4px; /* Space between text and cursor */
+    animation: blink 0.7s infinite; /* Blink animation */
+  }
+  
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1; /* Cursor visible */
+    }
+    50% {
+      opacity: 0; /* Cursor invisible */
+    }
+  }
+  
+  .intro-text{
+    h1{
+        // font-size: 1vw;
+        letter-spacing: -.04em;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-family: Garnett, sans-serif;
+        font-size: 4.5rem;
+        font-weight: 700;
+        line-height: 1.1;
+
+        @include respond-to(sm){
+            font-size: 3.5rem;
+            text-align: center;
+        }
+    }
+  }
+  .sub-text{
+    margin-top: 20px;
+    p{
+        width: 60%;
+        font-size: 1rem;
+        @include respond-to(sm){
+            width: 100%;
+        }
+    }
+  }
+  .hero-lottie {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 30% 19% 19% 30%;
+    gap: 10px; // Adjust this for spacing between divs as needed
+    
+    // Make it responsive
+    @include respond-to(md) {
+      grid-template-columns: 1fr 1fr; // Stack columns on smaller screens
+    }
+    @include respond-to(sm) {
+        grid-template-columns: 1fr; // Stack columns on smaller screens
+      }
+  }
+  
+  // Optional styling for each child div for demonstration
+  .first, .second, .third, .fourth {
+    background-color: $primary-color; // Customize as needed
+    height: 300px; // Adjust height as necessary for your layout
+  }
+  
+  .sub-hero-text{
+    margin-top: 20px;
+    h2{
+        text-align: center;
+    }
+  }

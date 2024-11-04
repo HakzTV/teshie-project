@@ -1,0 +1,170 @@
+.button-wrapper{
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  width: 50%;
+
+  @include respond-to(sm){
+    width: 100%;
+    gap: 15px;
+}
+}
+.btn{
+    padding: 10px 20px;
+    background: $btn-clr;
+    // background-image: linear-gradient(30deg, #866b2f, #dbb85e 50%, #866b2f);
+    border-radius: 50px;
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+    border: none;
+    &:hover {
+        animation: gradientShift 1s forwards;
+      }
+}
+.btn-line{
+    border-bottom: 1px solid $color-logo;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: $white;
+    text-decoration: none;
+}
+@keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+.btn-alt{
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: $text-primary;
+    font-size: 15px;
+    text-decoration: none;
+    border: none;
+    &:hover{
+        .outline{
+            width: 100%;
+            border-radius: 50px;
+        }
+        .pulse-ring{
+            display: none;
+        }
+    } 
+    
+}
+.outline{
+    background-color: transparent;
+    border: 1px solid $color-logo;
+    width: 2.25rem;
+    height: 2.25rem;
+    position: absolute;
+    top: 5%;
+    border-radius: 50px;
+    transition: width 0.3s ease, border-radius 0.3s ease;
+  z-index: 1; 
+    left: 5%;
+
+  
+}
+.outline2{
+  background-color: transparent;
+  border: 1px solid $color-logo;
+  width: 2.25rem;
+  height: 2.25rem;
+  top: 5%;
+  border-radius: 50px;
+  transition: width 0.3s ease, border-radius 0.3s ease;
+
+  svg{
+    color: $white;
+  }
+
+}
+.menu-toggle{
+    border: none;
+    padding: 15px;
+    background: none;
+}
+.hyper-links{
+    color: $primary-color;
+}
+.btn.outline{
+    background-color: transparent;
+    border: 1px solid $color-logo;
+    color: $primary-color;
+}
+.pulse-ring {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    border: 1px solid $color-logo;
+    z-index: 0;
+    animation: pulse 1.5s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+
+
+  /* src/components/SignUp.scss */
+.login-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.login-image, .login-form {
+  width: 50%;
+}
+
+.google-btn {
+  background-color: #4285F4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.google-btn:hover {
+  background-color: #357ae8;
+}
+
+.log-in {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.sign-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sign-btn:hover {
+  background-color: #45a049;
+}
+

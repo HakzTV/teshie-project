@@ -1,0 +1,46 @@
+@mixin container {
+  margin: 0 auto;
+  padding: 0 $container-padding;
+  max-width: $container-max-width;
+  width: 100%;
+}
+
+// Define your breakpoints
+$breakpoints: (
+  xs: 0,
+  mxs: 320px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+// Mixin for media queries
+//   @mixin respond-to($breakpoint) {
+//     @if map-has-key($breakpoints, $breakpoint) {
+//       @media (min-width: map-get($breakpoints, $breakpoint)) {
+//         @content;
+//       }
+//     } @else {
+//       @warn "Unknown breakpoint #{$breakpoint}.";
+//     }
+//   }
+
+// Mixin for media queries
+// Mixin for media queries
+@mixin respond-to($breakpoint, $type: max) {
+  // Determine the media query type (min-width or max-width) based on $type
+  $query-type: if($type == min, 'min-width', 'max-width');
+
+  // Check if the breakpoint exists in the $breakpoints map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Define the media query using a standard syntax for compatibility
+    @media only screen and (#{$query-type}: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  } @else {
+    // Warning if the breakpoint key is not found
+    @warn "Unknown breakpoint #{$breakpoint}.";
+  }
+}
+

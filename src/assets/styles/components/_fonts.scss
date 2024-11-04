@@ -1,0 +1,36 @@
+// src/styles/fonts.scss
+
+@font-face {
+    font-family: 'Garnett';
+    src: url('/src/assets/fonts/Garnett-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Garnett';
+    src: url('/src/assets/fonts/Garnett-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Garnett';
+    src: url('/src/assets/fonts/Garnett-Semibold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Garnett';
+    src: url('/src/assets/fonts/Garnett-Bold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Garnett';
+    src: url('/src/assets/fonts/Garnett-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
